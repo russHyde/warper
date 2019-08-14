@@ -4,3 +4,4 @@
 ^LICENSE\.md$
 ^\.lintr$
 ^\.travis\.yml$
+^codecov\.yml$
