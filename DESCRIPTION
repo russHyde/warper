@@ -15,3 +15,6 @@ BugReports: https://github.com/russHyde/warper/issues
 Suggests:
     testthat,
     covr
+Imports: 
+    Matrix,
+    purrr
