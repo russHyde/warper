@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/russHyde/warper.svg?branch=master)](https://travis-ci.org/russHyde/warper)
 <!-- badges: end -->
 
 The goal of warper is to …

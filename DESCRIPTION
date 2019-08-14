@@ -12,3 +12,5 @@ LazyData: true
 RoxygenNote: 6.1.1
 URL: https://github.com/russHyde/warper
 BugReports: https://github.com/russHyde/warper/issues
+Suggests:
+    testthat
