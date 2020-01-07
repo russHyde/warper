@@ -7,12 +7,13 @@
 as_matrix(x, rowname_col = NULL)
 }
 \arguments{
-\item{x}{A data-frame to be converted to a matrix}
+\item{x}{A data-frame to be converted to a matrix.}
 
 \item{rowname_col}{An (optional) column of the data-frame that is
 to be extracted into the rownames of the returned matrix.}
 }
 \description{
 If the user specifies `rowname_col`, this column is extracted from the
-data-frame and used to define the rownames of the matrix.
+data-frame and used to define the rownames of the matrix (the original
+column is removed).
 }
