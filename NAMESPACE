@@ -2,5 +2,6 @@
 
 S3method(as_biadjacency,list)
 export(as_biadjacency)
+export(as_matrix)
 importFrom(Matrix,Matrix)
 importFrom(purrr,reduce)
