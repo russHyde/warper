@@ -29,3 +29,34 @@ test_that("as_matrix", {
     info = "df -> matrix using first column as rownames"
   )
 })
+
+###############################################################################
+
+test_that("merge two matrices by matching rownames", {
+  m1 <- matrix(1:3, nrow = 3, dimnames = list(c("x", "y", "z"), c("a")))
+  m2 <- matrix(4:9, nrow = 3, dimnames = list(c("x", "y", "z"), c("b", "c")))
+
+  expect_equivalent(
+    merge(m1, m2),
+    matrix(
+      1:9,
+      nrow = 3, dimnames = list(letters[24:26], letters[1:3])
+    )
+  )
+
+  expect_equivalent(
+    merge(m1, m2[1:2, ]),
+    matrix(
+      c(1, 2, 4, 5, 7, 8),
+      nrow = 2, dimnames = list(letters[24:25], letters[1:3])
+    )
+  )
+
+  expect_equivalent(
+    merge(m1, m2[1:2, ], all.x = TRUE),
+    matrix(
+      c(1, 2, 3, 4, 5, NA, 7, 8, NA),
+      nrow = 3, dimnames = list(letters[24:26], letters[1:3])
+    )
+  )
+})

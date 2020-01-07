@@ -23,3 +23,23 @@ as_matrix <- function(x, rowname_col = NULL) {
     mat
   }
 }
+
+###############################################################################
+
+#' Generic function `merge` for merging two matrices by row-names
+#'
+#' A matrix is returned.
+#'
+#' @param        x,y           Matrices.
+#' @param        ...           Arguments for passing through to base::merge
+#'   (the data.frame method). Do not specify a `by` argument.
+#' @export
+
+merge.matrix <- function(x, y, ...) {
+  stopifnot(is.matrix(y))
+
+  as_matrix(
+    merge.data.frame(x, y, by = 0, ...),
+    rowname_col = "Row.names"
+  )
+}
