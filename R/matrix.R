@@ -33,6 +33,8 @@ as_matrix <- function(x, rowname_col = NULL) {
 #' @param        x,y           Matrices.
 #' @param        ...           Arguments for passing through to base::merge
 #'   (the data.frame method). Do not specify a `by` argument.
+#'
+#' @rdname   merge
 #' @export
 
 merge.matrix <- function(x, y, ...) {
